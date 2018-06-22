@@ -1,7 +1,5 @@
 project('mavlink2_headers', 'c')
 
-inc = include_directories('.')
-
 mavlink2_dep = declare_dependency(
-  include_directories : inc,
+  include_directories : include_directories('.', is_system : true),
 )
